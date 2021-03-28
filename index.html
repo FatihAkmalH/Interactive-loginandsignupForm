@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Pesantren</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!-- LINK ICON -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!--HEADER-->
+    <div class="container">
+        <header>
+            <h2>Selamat Datang</h2>
+            <p>Silahkan Login atau daftar terlebih dahulu</p>
+        </header>
+    </div>
+    <!--END HEADER-->
+    <!--CONTENT-->
+    <div class="container">
+        <div class="content">
+            <div class="col-content">
+                <div class="form-container">
+                    <div id="form-log">
+                        <h3>LogIn</h3>
+                        <p>Login Sebagai : </p>
+                        <div class="form-btn">
+                            <span onclick="santriWali()">Umum</span>
+                            <span onclick="alumniForm()">Member</span>
+                            <span onclick="guestForm()">Guest</span>
+                        </div>
+                        <hr id="indicator-login">
+                        <div class="error-text">ERROR</div>
+                        <form id="santri_wali">
+                            <input type="text" placeholder="Masukkan Email" autocomplete="off">
+                            <input type="password" placeholder="Masukkan Password" autocomplete="off">
+                            <input type="submit" value="Login">
+                            <p>*Belum daftar? <span class="form-change" onclick="sign_FormData()">daftar</span></p>
+                        </form>
+                        <form id="alumni">
+                            <input type="email" placeholder="Masukkan email" autocomplete="off">
+                            <input type="password" placeholder="Masukkan Password" autocomplete="off">
+                            <input type="submit" value="Login">
+                            <p>*Belum daftar? <span class="form-change" onclick="sign_FormData()">daftar</span></p>
+                        </form>
+                        <form id="guest">
+                            <input type="submit" value="Login as guest">
+                            <p>*Login ini tidak perlu daftar</p>
+                        </form>
+                    </div>
+
+                    <div id="sign-log">
+                        <h3>DAFTAR</h3>
+                        <p>Daftar Sebagai : </p>
+                        <div class="form-btn">
+                            <span onclick="signSantri()">Umum</span>
+                            <span onclick="signAlumni()">Member</span>
+                        </div>
+                        <hr id="indicator-signup">
+                        <div class="error-text">ERROR</div>
+                        <form id="sign-santri_wali">
+                            <input type="text" placeholder="Masukkan Nama Lengkap" autocomplete="off">
+                            <input type="text" placeholder="Masukkan Email" autocomplete="off">
+                            <input type="password" placeholder="Masukkan Password" autocomplete="off">
+                            <input type="submit" value="Daftar">
+                            <p>*Sudah daftar? <span class="form-change" onclick="login_formData()">login</span></p>
+                        </form>
+                        <form id="sign-alumni">
+                            <input type="text" placeholder="Masukkan Nama Lengkap" autocomplete="off">
+                            <input type="email" placeholder="Masukkan email" autocomplete="off">
+                            <input type="password" placeholder="Masukkan Password" autocomplete="off">
+                            <input type="submit" value="Daftar">
+                            <p>*Sudah daftar? <span class="form-change" onclick="login_formData()">login</span></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-content">
+                    <h4>Nama Perusahaan / yang lain</h4>
+                <div class="img-slider">
+                    <div class="img-slide fade">
+                        <img src="img/img1.jpg" alt="">
+                        <div class="caption">Caption 1</div>
+                    </div>
+                    <div class="img-slide fade">
+                        <img src="img/img3.jpg" alt="">
+                        <div class="caption">Caption 2</div>
+                    </div>
+                    <div class="img-slide fade">
+                        <img src="img/img6.jpg" alt="">
+                        <div class="caption">Caption 3</div>
+                    </div>
+                    <a class="left" onclick="plusSlides(-1)">&#8249;</a>
+                    <a class="right" onclick="plusSlides(1)">&#8250;</a>
+                </div>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    <script src="javascript/login.js"></script>
+</body>
+</html>
